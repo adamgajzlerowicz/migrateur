@@ -1,0 +1,22 @@
+{
+  "name": "root/migrateur",
+  "require": {
+    "silex/silex": "^1.3",
+    "knplabs/console-service-provider": "^1.0",
+    "doctrine/dbal": "~2.2",
+    "symfony/filesystem":"2.7.6",
+    "symfony/finder": "2.7.6",
+    "nesbot/carbon": "^1.21"
+  },
+  "autoload": {
+    "psr-0": {
+      "migrateur": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "adam",
+      "email": "nel86@gmail.com"
+    }
+  ]
+}
