@@ -1,4 +1,4 @@
-#Migratour
+#Migrateur
 
 ##Purpouse:
 To run migrations on multiple databases simultaneously, using command line.
