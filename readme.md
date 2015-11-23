@@ -1,6 +1,6 @@
 #Migrateur
 
-##Purpouse:
+##Purpose:
 To run migrations on multiple databases simultaneously, using command line.
 
 ##Installation:
