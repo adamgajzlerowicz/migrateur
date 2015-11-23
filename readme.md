@@ -14,7 +14,7 @@ Default configuration assumes that your "main" database name is `companydatabase
 You may change the name of your "main" database in the config file.
 Example table structure will look like this (please notice the `company1`, `company2` and `company3` table)
 
-![databases](/src/database.png)
+![databases](/images/database.png)
 
 ##Usage:
 In the root folder of the application execute `php console.php`. This will give you access to three commands: `migrate:check`, `migrate:create` and `migrate:migrate`.
@@ -25,3 +25,5 @@ The first run of `migrate:check` command will check if `migrations` table exist,
 - check status of your migrations with `migrate:check` 
 - run your migrations using `migrate:migrate`
 - check if the migration run successfully `migrate:check`
+
+![console](/images/console.png)
