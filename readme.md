@@ -24,4 +24,4 @@ The first run of `migrate:check` command will check if `migrations` table exist,
 - generate new migrations using the `migrate:create`
 - check status of your migrations with `migrate:check` 
 - run your migrations using `migrate:migrate`
-- check if the migration run sucessfully `migrate:check`
+- check if the migration run successfully `migrate:check`
