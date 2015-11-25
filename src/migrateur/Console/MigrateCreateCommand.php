@@ -50,7 +50,7 @@ class '.$migrationName.' extends MigrationService
     public function up()
     {
 
-        $this->add(" ");
+        $this->add(\'\');
 
     }
 

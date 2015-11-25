@@ -11,11 +11,9 @@ class MigrationService {
     /** @var Connection $db */
     protected $db;
     public function __construct($app){
-        $this->app = $app;
-        /** @var Connection $db */
-        $this->db = $app['db'];
-        $this->queries=array();
 
+        $this->app = $app;
+        $this->queries=array();
     }
 
     /**
@@ -36,15 +34,6 @@ class MigrationService {
         return true;
     }
 
-    public function startTransaction(){
-        $this->db->beginTransaction();
-    }
-    public function commitTransaction(){
-        $this->db->commit();
-    }
-    public function rollbackTransaction(){
-        $this->db->rollBack();
-    }
     public function run(){
         $success = true;
         foreach($this->queries as $sql){
@@ -60,6 +49,7 @@ class MigrationService {
     public function add($data){
         $this->queries[] = $data;
     }
+
     public function isThereQueries(){
         $thereIs = false;
         foreach($this->queries as $query){
