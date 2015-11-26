@@ -65,7 +65,7 @@ $query = "select * from ".$config->getMainTableName();
 $databases = $app['db']->fetchAll($query);
 $app['databases'] = $databases;
 
-$files = $app['finder']->files()->in('migrations');
+$files = $app['finder']->files()->in('migrateur');
 $query = "select * from migrations";
 $migrations = $app['db']->fetchAll($query);
 $migrationNames = array();
