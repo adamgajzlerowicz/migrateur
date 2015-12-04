@@ -6,6 +6,7 @@ $config->setHost('localhost');
 $config->setDbname('companydatabases');
 $config->setPassword('');
 $config->setUser('root');
+$config->setMigrationsFolder('../migrations');
 
 $config->setmainTableName('databasesettings');
 $config->setUserColumn('dbusername');

@@ -16,11 +16,28 @@ class ConfigModel {
     protected $passwordColumn;
     protected $databaseColumn;
     protected $migrationsTable;
-
+    protected $migrationsFolder;
     protected $host;
     protected $dbname;
     protected $user;
     protected $password;
+
+    /**
+     * @return mixed
+     */
+    public function getMigrationsFolder()
+    {
+        return $this->migrationsFolder;
+    }
+
+    /**
+     * @param mixed $migrationsFolder
+     */
+    public function setMigrationsFolder($migrationsFolder)
+    {
+        $this->migrationsFolder = $migrationsFolder;
+    }
+
 
     /**
      * @return mixed
