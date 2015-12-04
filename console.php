@@ -5,7 +5,11 @@ if (is_file(__DIR__ . '/../vendor/autoload.php')) {
     require_once __DIR__ . '/../vendor/autoload.php';
 } else if (is_file(__DIR__ . '/../../../autoload.php')) {
     require_once __DIR__ . '/../../../autoload.php';
+} else if (is_file('./vendor/autoload.php')) {
+    require_once './vendor/autoload.php';
 }
+require_once './vendor/autoload.php';
+
 use migrateur\Console\MigrateCheckCommand;
 use migrateur\Console\MigrateCreateCommand;
 use migrateur\Console\MigrateRunCommand;
