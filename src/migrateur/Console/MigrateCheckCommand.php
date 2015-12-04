@@ -21,7 +21,7 @@ class MigrateCheckCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $app = require_once(__DIR__ . 'bootstrap.php');
+        $app = require_once(__DIR__.'/../../../bootstrap.php');
         /** @var ConfigModel $config */
         $config = $app['config'];
         /** @var Connection $db */
