@@ -38,6 +38,11 @@ class MigrateCheckCommand extends Command
               PRIMARY KEY (`id`));";
             $db->executeQuery($query);
         }
+        $folderExists = $app['fs']->exists('./migrateur');
+        if(!$folderExists) {
+            die('doesnt');
+        };
+    )
         $output->writeln('   Status     |                  Migration Name');
         $output->writeln('---------------------------------------------------------------');
 
