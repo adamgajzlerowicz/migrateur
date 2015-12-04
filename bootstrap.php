@@ -4,7 +4,12 @@ use migrateur\Models\ConfigModel;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
 
-require_once __DIR__ . '/vendor/autoload.php';
+if (is_file(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+} else if (is_file(__DIR__ . '/../../../autoload.php')) {
+    require_once __DIR__ . '/../../../autoload.php';
+} 
+
 
 $app = new Silex\Application();
 
@@ -60,7 +65,7 @@ $query = "select * from ".$config->getMainTableName();
 $databases = $app['db']->fetchAll($query);
 $app['databases'] = $databases;
 
-$files = $app['finder']->files()->in('migrations');
+$files = $app['finder']->files()->in('migrateur');
 $query = "select * from migrations";
 $migrations = $app['db']->fetchAll($query);
 $migrationNames = array();

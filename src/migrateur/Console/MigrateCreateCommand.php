@@ -27,7 +27,7 @@ class MigrateCreateCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $app = require_once('bootstrap.php');
+        $app = require_once(__DIR__.'/../../../bootstrap.php');
         /** @var ConfigModel $config */
         $config = $app['config'];
         /** @var Connection $db */
@@ -64,7 +64,7 @@ class '.$migrationName.' extends MigrationService
 
 
 
-        $fs->dumpFile('migrations/'.$migrationName.'.php', $template);
+        $fs->dumpFile('migrateur/'.$migrationName.'.php', $template);
 
         $output->writeln('<info>Migration '.$migrationName.' created successfully</info>');
 

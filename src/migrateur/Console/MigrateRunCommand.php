@@ -24,8 +24,7 @@ class MigrateRunCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
-        $app = require_once('bootstrap.php');
+        $app = require_once(__DIR__.'/../../../bootstrap.php');
         /** @var ConfigModel $config */
         $config = $app['config'];
         /** @var Connection $db */
@@ -33,7 +32,7 @@ class MigrateRunCommand extends Command
         $hasRun = false;
         $unRunMigrations = $app['unRunMigrations'];
         foreach ($unRunMigrations as $name) {
-            require_once('migrations/' . $name);
+            require_once('migrateur/' . $name);
         }
         $initialisedDatabases = array();
         foreach($app['databases'] as $database) {
