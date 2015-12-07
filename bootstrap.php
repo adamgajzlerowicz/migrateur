@@ -65,6 +65,10 @@ $query = "select * from ".$config->getMainTableName();
 $databases = $app['db']->fetchAll($query);
 $app['databases'] = $databases;
 
+$folderExists = $app['fs']->exists('./migrateur');
+if(!$folderExists) {
+    $app['fs']->mkdir('./migrateur');
+};
 $files = $app['finder']->files()->in('migrateur');
 $query = "select * from migrations";
 $migrations = $app['db']->fetchAll($query);

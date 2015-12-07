@@ -4,6 +4,7 @@
   "keywords": ["database","multiple"],
   "homepage": "https://github.com/adamgajzlerowicz/migrateur",
   "license": "MIT",
+  "bin": ["console.php"],
   "require": {
     "silex/silex": "^1.2",
     "knplabs/console-service-provider": "^1.0",

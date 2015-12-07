@@ -16,7 +16,6 @@ class ConfigModel {
     protected $passwordColumn;
     protected $databaseColumn;
     protected $migrationsTable;
-
     protected $host;
     protected $dbname;
     protected $user;
